@@ -29,4 +29,11 @@ html {
   height: 800px;
   background-color: #f2eecb;
   border-radius: 4px;
+
+  padding: 32px;
+}
+
+.frame {
+  border: 1px solid #484848;
+  height: 100%;
 }
