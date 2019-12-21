@@ -4,6 +4,7 @@
 
 :root {
   --main-red-color: #e06262;
+
   --main-black-color: #484848;
 }
 
@@ -49,6 +50,7 @@ html {
 .frame {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   border: 1px solid var(--main-black-color);
   height: 100%;
@@ -81,13 +83,21 @@ html {
   outline: unset;
 }
 
+.header-btn.main-red-color:active {
+  text-shadow: 1px 1px 2px var(--main-red-color);
+}
+
+.header-btn.main-black-color:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
+}
+
 .add {
   padding: 16px;
 }
 
 .add-form {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .add-input {
@@ -116,4 +126,33 @@ html {
   background: unset;
   border: unset;
   outline: unset;
+}
+
+.add-btn:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  position: relative;
+
+  flex: 1 0 auto;
+  text-align: center;
+
+  min-height: 34px;
+  margin: 16px 0 0;
+  font-family: "Homemade Apple", sans-serif;
+  font-size: 24px;
+
+  border-bottom: 1px solid var(--main-red-color);
+}
+
+.todo-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
